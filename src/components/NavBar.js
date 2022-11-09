@@ -8,7 +8,7 @@ const Navbar = () => {
             <nav className="principal-navegation contenedor">
                 <div className="div-logo">
                     <a  href="#">
-                    <img class="bling-logo" src={logoBling} alt="logotipo"/>
+                        <img class="bling-logo" src={logoBling} alt="logotipo"/>
                     </a>
                 </div>
                 <div className="nav">
@@ -19,8 +19,7 @@ const Navbar = () => {
                 </div>
                 <div className="carrito-div">
                     <CartWidget/>
-                </div>
-                    
+                </div>    
             </nav>
         </div>
     )

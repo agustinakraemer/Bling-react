@@ -20,7 +20,11 @@
   height: 40vmin;
   pointer-events: none;
 }
-
+.container {
+  max-width: 60%;
+  margin: 0 auto;
+  padding-top: 3rem;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -71,6 +75,7 @@
   text-align: center;
   display: flex;
   justify-content: center;
+  
 }
 .nav {
   width: 80%;
@@ -79,7 +84,7 @@
   justify-content: center;
 }
 .nav a{
- padding: 1.2rem;
+ padding: 1.5rem;
  margin-right: 1.5rem;
  margin-left: 1.5rem;
  font-size: 1.3rem;
@@ -100,6 +105,7 @@
 }
 .nav-bg {
   background-color: var(--1);
+
 }
 .carrito {
   padding-top: 0.3rem;
@@ -109,16 +115,74 @@
   align-items: center;
   padding-right: 0.7rem;
   padding-left: 0.7rem;
+  width: 10%;
+  justify-content: center;
 }
 .carrito-div:hover {
   background-color: var(--1-oscuro);
   transition: all .3s;
 }
-.div-log {
+.div-logo {
   display: flex;
   align-items: center;
+  width: 10%;
 }
 .bling-logo {
-  width: 6rem;
-  padding-top: 0.6rem;
+  width: 9rem;
+  padding-top: 0.4rem;
+  align-items: center;
+}
+/*---Productos----*/
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+}
+.producto {
+  background-color: rgba(0, 0, 0, 0.91);
+  margin: 1.5rem;
+  text-align: center;
+  box-shadow: 0px 0px 11px -3px rgba(0,0,0,0.59);
+  -webkit-box-shadow: 0px 0px 11px -3px rgba(0,0,0,0.59);
+  -moz-box-shadow: 0px 0px 11px -3px rgba(0,0,0,0.59);
+}
+.producto a {
+  text-decoration: none;
+}
+.producto__imagen {
+  width: 100%;
+}
+.producto__nombre {
+  font-size: 0.9rem;
+  margin: 0.5rem 0.5rem;
+  color: var(--blanco);
+  text-transform: uppercase;
+}
+.producto__precio {
+  font-size: 2.rem;
+  color: var(--blanco);
+}
+.producto__id {
+  display: none;
+}
+.producto__precio, .producto__id {
+  margin: 0.5rem 0;
+  text-align: center;
+}
+.producto__button {
+  background-color: rgb(60, 60, 60);
+  color: var(--blanco);
+  font-weight: 700;
+  border-style: none;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+  font-size: 0.7rem;
+  padding: 0.6rem 1.1rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all .3s;
+}
+.producto__button:hover {
+  background-color: var(--3);
 }
