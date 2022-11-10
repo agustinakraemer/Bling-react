@@ -20,15 +20,15 @@ const Home =() =>{
             }        
         }
         getProducts();
-        }, [])
+        }, [idCategory])
 
     return(
-        <div>
+        <div className="main">
             <Category />
             {isLoading ? (
                 <div> Loading...</div>
             ): (
-                <section className="container">
+                <section className="section_container">
                     <div className="grid " id="contenedor__productos">
                     {products.map(product => (
                         <Card key={product.id} item={product} />

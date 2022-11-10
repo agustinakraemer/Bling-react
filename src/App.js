@@ -1,7 +1,6 @@
 import './App.css';
-import logo from './logo.svg';
 import Navbar from './components/NavBar'
-import ItemListContainer from './components/ItemListContainer'
+/* import ItemListContainer from './components/ItemListContainer' */
 import { Route, Router, Routes } from 'react-router-dom';
 import {Home, Detail, Category} from './pages/index';
 
