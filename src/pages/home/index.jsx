@@ -28,7 +28,7 @@ const Home =() =>{
             {isLoading ? (
                 <div> Loading...</div>
             ): (
-                <section className="section_container">
+                <section className="section_container container">
                     <div className="grid " id="contenedor__productos">
                     {products.map(product => (
                         <Card key={product.id} item={product} />
