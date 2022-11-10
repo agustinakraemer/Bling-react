@@ -21,7 +21,7 @@ const Navbar = () => {
                 </div>
                 <div className="nav">
                     <a onClick={onInicio} href="#">Inicio</a>
-                    <a onClick={onCategory} href="#">Categorías</a>
+                    
                     <a href="#">Contacto</a>
                 </div>
                 <div className="carrito-div">

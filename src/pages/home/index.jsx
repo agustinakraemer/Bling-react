@@ -1,42 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import { useParams } from "react-router-dom";
 import Card from "../../components/card";
+import Category from '../category/index';
 
 const Home =() =>{
-/*     const [products, setProducts] = useState([]);
-    const [isLoading, setIsLoading] = useState(false);
-    const startProduct = useRef(1);
-    const endProduct = useRef(20);
-    const getProducts = async (start = '1', end = '20') => {
-        try {
-            const promises = [];
-            for (let i = start; i <= end; i++) {
-                promises.push(fetch(`https://636a72a4c07d8f936d9e3a2e.mockapi.io/products`).then(res => res.json()));
-            }
-            const results = await Promise.all(promises);
-            const newProduct = results.map((product) => {
-                return {
-                    id: product.id,
-                    nombre: product.name,
-                    image: product.image,
-                    price: product.price,
-                }
-            });
-            setProducts(newProduct);
-
-        } catch (error) {
-            console.log(error);
-        } finally {
-            setIsLoading(false)
-        }
-    }
-    useEffect(() => {
-        getProducts(startProduct.current, endProduct.current);
-    }, []);
-
-    console.log('products',products); */
     const [isLoading, setIsLoading] = useState(false);
     const [products, setProducts] = useState([]);
-        useEffect(()=> {
+     /*    useEffect(()=> {
             const getProducts = async ()=> {
             try {
                 const data = await fetch('https://636a72a4c07d8f936d9e3a2e.mockapi.io/products');
@@ -50,11 +20,35 @@ const Home =() =>{
             }
         getProducts();
   }, [])
-  console.warn('products',products);
+
+  console.warn('products',products); */
+  const {idCategory} = useParams ();
+
+    useEffect(()=> {
+        const getProducts = async ()=> {
+            const data = await fetch('https://636a72a4c07d8f936d9e3a2e.mockapi.io/products');
+            const dataProducts = await data.json();
+            if (idCategory) {
+                setProducts(dataProducts.filter(idCategory));
+            } else {
+                setProducts(dataProducts);
+            }        
+       /*  try {
+            const data = await fetch('https://636a72a4c07d8f936d9e3a2e.mockapi.io/products');
+            const dataProducts = await data.json();
+            setProducts(dataProducts);
+        } catch (error) {
+            console.log(error);
+        } finally {
+            setIsLoading(false)
+        } */
+        }
+        getProducts();
+        }, [])
 
     return(
         <div>
-            <h2>Home</h2>
+            <Category />
             {isLoading ? (
                 <div> Loading...</div>
             ): (
