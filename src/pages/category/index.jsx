@@ -24,6 +24,7 @@ const Category = () => {
                     <li><Link to={'/category/Outdoors'}>Patio</Link></li>
                     <li><Link to={'/category/Baby'}>Bebé</Link></li>
                     <li><Link to={'/category/Automotive'}>Automoviles</Link></li>
+                    <li><Link to={'/category/Industrial'}>Industrial</Link></li>
                 </ul>
             </div>
         </div>

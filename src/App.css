@@ -223,12 +223,12 @@
 .category_container h2{
   font-size: 1.4rem;
   margin-bottom: 0.9rem;
-  margin-top: 0.5rem;
+  margin-top: 0;
   color: #a47871;
 }
 .category_container li {
   list-style: none;
-  padding-bottom: 0.4rem;
+  padding-bottom: 0.35rem;
   font-size: 1.2rem;
   transition: all .3s;
 }
@@ -237,7 +237,7 @@
   color:#577975;
 }
 .category_container li:hover {
-  transform: scale(1.2);
+  transform: scale(1.13);
   cursor: pointer;
   transition: all .3s;
 }
