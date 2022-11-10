@@ -1,5 +1,4 @@
 import './App.css';
-import React, { useEffect, useState } from 'react';
 import logo from './logo.svg';
 import Navbar from './components/NavBar'
 import ItemListContainer from './components/ItemListContainer'
@@ -8,7 +7,7 @@ import {Home, Detail} from './pages/index';
 
 
 function App() {
-  const [products, setProducts] = useState([]);
+  /* const [products, setProducts] = useState([]);
   useEffect(()=> {
     const getProducts = async ()=> {
       try {
@@ -21,7 +20,7 @@ function App() {
     }
     getProducts();
   }, [])
-  console.warn('products',products);
+  console.warn('products',products); */
   
   return (
     <div className="App">
@@ -32,7 +31,7 @@ function App() {
           {products.length > 0 ? products.map(product => (
             <div className="producto">
                   <img className="producto__imagen" src={product.image} alt="nature"/>
-                  <div key={product.id} class="producto__informacion">
+                  <div key={product.id} className="producto__informacion">
                       <p className="producto__nombre">{product.name}</p>
                       <p className="producto__precio">${product.price}</p>
                   </div>
@@ -44,7 +43,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="detail" element={<Detail />} />
+          <Route path="/product/:pruductId" element={<Detail />} />
         </Routes>
       </main>
       {/* <div className="App-header">

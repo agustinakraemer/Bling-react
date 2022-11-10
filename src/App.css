@@ -146,11 +146,15 @@
   -webkit-box-shadow: 0px 0px 11px -3px rgba(0,0,0,0.59);
   -moz-box-shadow: 0px 0px 11px -3px rgba(0,0,0,0.59);
 }
+.producto:hover {
+  cursor: pointer;
+}
 .producto a {
   text-decoration: none;
 }
 .producto__imagen {
   width: 100%;
+  max-width: 30rem;
 }
 .producto__nombre {
   font-size: 0.9rem;
@@ -168,6 +172,10 @@
 .producto__precio, .producto__id {
   margin: 0.5rem 0;
   text-align: center;
+}
+.producto__categoria {
+  color: rgba(255, 255, 255, 0.274);
+  font-size: 0.875rem;
 }
 .producto__button {
   background-color: rgb(60, 60, 60);

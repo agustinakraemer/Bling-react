@@ -1,9 +1,16 @@
 import React from "react";
+import { useParams, useLocation } from "react-router-dom";
+import Card from "../../components/card";
+
 
 const Detail =() =>{
+    const {params} = useParams ();
+    const {state} = useLocation();
+    console.warn('params', params,'state', state);
+
     return(
         <div>
-            <h2>Detail</h2>
+            <Card item={state} />
         </div>
     )
        
