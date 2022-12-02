@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams, useLocation } from "react-router-dom";
-import Card from "../../components/card";
+import Card from "../../components/Card";
 
 const Detail =() =>{
     const {params} = useParams ();

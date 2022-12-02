@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from "react-router-dom";
-import Card from "../../components/card";
+import Card from '../../components/Card'
 import Category from '../category/index';
 
 const Home =() =>{

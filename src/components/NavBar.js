@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import logoBling from './logo_bling.png';
 import CartWidget from './CartWidget';
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { CartContext } from '../context/CartContext';
 
 const Navbar = () => {
+   /*  const cartContext = useContext(CartContext);
+    const { cart } = cartContext; */
+
     const navigate = useNavigate();
     const onInicio = () => {
         navigate('/');
@@ -22,10 +26,12 @@ const Navbar = () => {
                 </div>
                 <div className="nav">
                     <Link to={'/'}>Inicio</Link>
+                    <Link to={'/'}>Clientes</Link>
+                    <Link to={'/'}>Nosotros</Link>
                     <Link to={'/'}>Contacto</Link>
                 </div>
                 <div className="carrito-div">
-                    <CartWidget/>
+                <Link to={'/c'}> <CartWidget/> </Link>
                 </div>    
 
             </nav>
