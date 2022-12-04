@@ -1,11 +1,8 @@
 import React, { useContext } from 'react';
 import { CartContext } from '../context/CartContext';
 
-
 const CartWidget =() => {
-    /* const cartContext = useContext(CartContext);
-    const { cart } = cartContext;
- */
+    const {cart} = useContext(CartContext);
     return (
         <div className="carrito-div">
             <a className="carrito">
@@ -17,7 +14,7 @@ const CartWidget =() => {
                     <path d="M6 5l14 1l-1 7h-13" />
                 </svg>
             </a>
-            <span className="cartNumber">0</span>
+            <span className="cartNumber">{cart.lengh}</span>
         </div>
         
     )

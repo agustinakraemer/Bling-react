@@ -259,10 +259,10 @@
 }
 .category_container li a {
   text-decoration: none;
-  color:#577975;
+  color:#6c6c6c;
 }
 .category_container li:hover {
-  transform: scale(1.09);
+  transform: scale(1.03);
   cursor: pointer;
   transition: all .3s;
 }
