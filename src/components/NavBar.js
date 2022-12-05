@@ -6,8 +6,6 @@ import { Link } from "react-router-dom";
 import { CartContext } from '../context/CartContext';
 
 const Navbar = () => {
-   /*  const cartContext = useContext(CartContext);
-    const { cart } = cartContext; */
 
     const navigate = useNavigate();
     const onInicio = () => {

@@ -294,7 +294,7 @@
   cursor: default;
   padding-top: 6.1rem;
   padding-bottom: 0;
-  background-color: rgba(57, 57, 57, 0.756);
+  background-color: var(--blanco);
   margin: 0rem;
   text-align: center;
   z-index: 0;
@@ -303,20 +303,29 @@
 .detail .producto__nombre {
   font-size: 1.8rem;
   margin: 0.5rem 0.5rem;
-  color: var(--blanco);
+  color: var(--negro);
   text-transform: none;
   font-weight: 700;
 }
 .detail .producto__precio {
   font-size: 1.5rem;
-  color: var(--blanco);
+  color: var(--negro);
   padding-top: 1rem;
 }
 
 .detail .producto__categoria {
-  color: var(--blanco);
+  color: var(--negro);
   font-size: 1rem;
   padding-top: 2rem;
+}
+.detail .producto__button{
+  width: 15rem;
+  font-size: 0.8rem;
+  background-color: #9e9e97;
+}
+.detail .producto__button:hover{
+  background-color: #2d2d2d;
+  transform: scale(1);
 }
 /*------CART-----*/
 .tabla_productos {
@@ -344,6 +353,7 @@
   font-weight: bold;
   background-color: var(--3);
   color: #ffffff;  
+  border-spacing: 0ch;
 }
 .tabla__head td{
   font-size: 1.4rem;
@@ -361,6 +371,9 @@ tr, td {
 td .right {
   font-size: 1.9rem;
   font-weight: 700;
+}
+tr {
+  border-collapse: collapse;
 }
 .sumaTotal {
   padding-bottom: 0%;
@@ -401,6 +414,7 @@ td .right {
   padding: 0.5rem;
 }
 .producto__button.btn-eliminar:hover{
-  background-color: #d5b1b1;
+  background-color: #c59898;
   color: #151515;
+  transform: scale(1);
 }
