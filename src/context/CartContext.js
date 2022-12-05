@@ -1,4 +1,5 @@
 import { createContext, useState } from "react";
+import { act } from "react-dom/test-utils";
 
 
 export const CartContext = createContext();
@@ -11,8 +12,24 @@ export const CartProvider = ({children}) => {
         setCart([])
     }
 
-    const addToCart = (id) => {
-        setCart(cart.push((prod) => prod.id === id))
+    const addToCart= (newProd, quantity) => {
+        
+        const newObj = {
+            ... newProd,quantity
+        }
+        // hacer una condicional, si el nuevo objeto está en el carrito
+        if ( isInCart ( newObj.id )) {
+            cart.map(el => {
+                if(el.id === newObj.id)  {
+                el.quantity += newObj.quantity
+                }
+                return(el)
+                })
+            }
+        else {
+            setCart ([... cart , newObj])
+            }
+        console.log(cart)
     }
 
     const isInCart = (id) => {
@@ -22,6 +39,12 @@ export const CartProvider = ({children}) => {
     const removeItem = (id) => {
         setCart(cart.filter((prod)=> prod.id !== id))
     }
+    /* const totalPrice =() => {
+        return cart.reduce((prev, act) => prev + act.quantity * act.price, 0);
+    }
+    const totalProducts = ()=> {
+        cart.reduce((acumulador, productoActual) => acumulador + productoActual.quantity, 0)
+    } */
 
     return (
 

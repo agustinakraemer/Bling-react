@@ -81,6 +81,7 @@
   display: flex;
   justify-content: center;
   z-index: 1000;
+  top: 0;
 }
 .nav {
   width: 80%;
@@ -88,6 +89,7 @@
   display: flex;
   justify-content: center;
   z-index: 1000;
+  top: 0;
 }
 .nav a{
  padding: 1.5rem;
@@ -116,7 +118,7 @@
   -webkit-box-shadow: -1px 10px 20px -5px rgba(113, 85, 81, 0.44);
   -moz-box-shadow: -1px 10px 20px -5px rgba(86, 64, 61, 0.44);
   z-index: 1000;
-
+  top: 0;
 }
 .carrito {
   padding-top: 0.3rem;
@@ -233,6 +235,19 @@
   transform: scale(1.10);
   transition: all .4s;
 } 
+.btn-resta
+.item-count {
+  color: var(--blanco);
+}
+.btn-cant{
+  padding: 0.6rem;
+  color: var(--blanco);
+  font-size: 1rem;
+}
+.producto__button.btn-suma, .producto__button.btn-resta  {
+  margin-bottom: 0rem;
+  padding: 0.4rem 0.7rem;
+}
 .count-container__qty {
   color: var(--blanco);
   padding: 0.5rem;
@@ -302,4 +317,90 @@
   color: var(--blanco);
   font-size: 1rem;
   padding-top: 2rem;
+}
+/*------CART-----*/
+.tabla_productos {
+  background-color: #ffffff;
+  width: 60%;
+  margin: 8rem auto;
+  border-collapse: collapse;
+  border-radius: 12px;
+  font-size: 1.5rem;
+  padding: 3rem;
+  box-shadow: 0px 0px 11px -3px rgba(0,0,0,0.59);
+  -webkit-box-shadow: 0px 0px 11px -3px rgba(0,0,0,0.59);
+  -moz-box-shadow: 0px 0px 11px -3px rgba(0,0,0,0.59);
+}
+.tabla_productos h2{
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+.tabla {
+  width: 100%;
+  padding: 2rem;
+}
+.tabla__head {
+  justify-content: center;
+  font-weight: bold;
+  background-color: var(--3);
+  color: #ffffff;  
+}
+.tabla__head td{
+  font-size: 1.4rem;
+  color: var(--blanco);
+}
+.tabla__body tr {
+  border-left: 2px solid #ccccc4;
+}
+.tabla__body td {
+  font-size: 1.3rem;
+}
+tr, td {
+  padding: 1.3rem 0;
+}
+td .right {
+  font-size: 1.9rem;
+  font-weight: 700;
+}
+.sumaTotal {
+  padding-bottom: 0%;
+  padding-top: 2rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: right;
+}
+.sumaTotal span{
+  font-size: 1.5rem;
+}
+.cuotasTotal {
+  font-weight: 700;
+}
+.imagen-carrito {
+  width: 8rem;
+}
+.carritoVacio {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+.producto__button.boton-agregar {
+  background-color: #ccccc4;
+  color: #5a5a5a;
+  font-size: 0.9rem;
+}
+.producto__button.boton-agregar:hover {
+  background-color: #9e9e97;
+  color: var(--blanco);
+}
+.producto__button.btn-eliminar{
+  background-color: #e9e9e9;
+  color: #5a5a5a;
+  font-size: 0.7rem;
+  padding: 0.5rem;
+}
+.producto__button.btn-eliminar:hover{
+  background-color: #d5b1b1;
+  color: #151515;
 }

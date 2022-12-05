@@ -31,7 +31,7 @@ const Navbar = () => {
                     <Link to={'/'}>Contacto</Link>
                 </div>
                 <div className="carrito-div">
-                <Link to={'/c'}> <CartWidget/> </Link>
+                <Link to={'/cart'}> <CartWidget/> </Link>
                 </div>    
 
             </nav>
